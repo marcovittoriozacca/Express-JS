@@ -1,12 +1,12 @@
 include components/header.pug
 main(class="container mx-auto px-2 py-20")
     div 
-        ul(class="flex flex-col")
+        ul(class="flex flex-col gap-y-5")
             each val, key in postsList
                 li(class="flex items-start gap-x-3")
                     div
                         figure(class='w-[200px] rounded-md overflow-hidden')
-                            img(class="w-full h-auto")(src=`/img/${val.img}`, alt=val.title)
+                            img(class="w-full h-auto", src=`/img/${val.img}`, alt=val.title)
                     div 
                         h2= val.title
                         p= val.description

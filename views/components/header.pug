@@ -9,12 +9,13 @@ html(lang="en")
     header(class='fixed w-full bg-white') 
       nav(class='flex justify-between items-center container mx-auto p-2') 
         - const pugLink= "https://pugjs.org/api/getting-started.html"
+        - const github= "https://github.com/marcovittoriozacca"
         ul(class='flex items-center gap-x-4')
           li
             figure(class="w-10")
                 img(src="/img/pugjs.png", alt="little-pug-js")
           li
-            a(class="text-xl font-extrabold")(href=pugLink) pug
+            a(class="text-xl font-extrabold", href=pugLink, target="_blank") pug
         ul(class='flex items-center gap-x-4')
           li(class=' hover:scale-110 transition-transform duration-150 hover:cursor-pointer ease-out')
-            a(class=' bg-neutral-800 text-neutral-100 p-2 rounded-md') GitHub
+            a(class=' bg-neutral-800 text-neutral-100 p-2 rounded-md', href=github, target="_blank") GitHub
