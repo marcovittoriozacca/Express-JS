@@ -1,9 +1,38 @@
 include components/header.pug
 main(class="container mx-auto px-2 py-20")
     div 
-        ul(class="flex flex-col gap-y-5")
+        div(class="flex flex-col gapy-4")
+            div(class="mb-3 flex flex-col")
+                label(for="title", class="text-slate-600 font-semibold") Title
+                input(type="text", name="title", id="title", class="outline-none border rounded-md px-3 py-1 focus:border-sky-400 focus:ring-1 focus:ring-sky-400")
+
+            div(class="mb-3 flex flex-col")
+                label(for="description", class="text-slate-600 font-semibold") Description
+                textarea(name="description", id="description", cols="30", rows="5", class="outline-none border rounded-md px-3 py-1 focus:border-sky-400 focus:ring-1 focus:ring-sky-400") 
+
+            div(class="mb-3 flex flex-col gap-x-3")
+                div(class="flex items-center gap-x-3")
+                    label(for="tags[]", class="text-slate-600 font-semibold") Tags
+                    div(class="flex items-center gap-x-3 p-2 bg-slate-300 rounded-md") 
+                        label(for="tags", class="text-slate-600 font-semibold") Traveling
+                        input(type="checkbox", name="tags[]", value="traveling")
+
+                    div(class="flex items-center gap-x-3  p-2 bg-slate-300 rounded-md") 
+                        label(for="tags", class="text-slate-600 font-semibold") Coocking
+                        input(type="checkbox", name="tags[]", value='coocking')
+
+                    div(class="flex items-center gap-x-3  p-2 bg-slate-300 rounded-md") 
+                        label(for="tags", class="text-slate-600 font-semibold") Technologies
+                        input(type="checkbox", name="tags[]", value='technologies')
+
+            div(class="mb-3")
+                label(for="image", class="text-slate-600 font-semibold") Image
+                input(type="text", name="image", id="image", class="outline-none w-full border rounded-md px-3 py-1 focus:border-sky-400 focus:ring-1 focus:ring-sky-400")
+
+        button(type="submit", id="submit" class="mb-5 px-4 py-1 bg-blue-500 rounded-md text-white") Add Post
+        ul(class="flex flex-col gap-y-5 [&>*:nth-child(odd)]:bg-slate-200")
             each val, key in postsList
-                li(class="flex items-start gap-x-3")
+                li(class="flex items-start gap-x-3 p-5 rounded-md")
                     div
                         figure(class='w-[200px] rounded-md overflow-hidden')
                             img(class="w-full h-auto", src=`/img/${val.img}`, alt=val.title)
@@ -14,6 +43,6 @@ main(class="container mx-auto px-2 py-20")
                             each tag in val.tags
                                 span= tag
 
-                        
+script(src="/js/postScript.js")
 
         

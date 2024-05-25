@@ -17,6 +17,8 @@ app.get('/', home.index);
 
 app.get('/posts', posts.index );
 
+app.post('/posts', posts.create);
+
 app.listen(port, host, () => {
     console.log(`Server avviato su: http://${host}:${port}`);
 })
