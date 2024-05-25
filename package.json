@@ -1,5 +1,5 @@
 {
-  "name": "express-js",
+  "name": "express-js-pug",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "install": "^0.13.0",

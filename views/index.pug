@@ -1,0 +1,23 @@
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    link(rel="stylesheet", href="/style/output.css")
+  body 
+    header 
+      nav(class='flex justify-between items-center container mx-auto p-2') 
+        ul(class='flex items-center gap-x-4')
+          li
+            a(href=google) Google
+          li
+            a(href=amazon) Amazon
+        ul(class='flex items-center gap-x-4')
+          li(class='bg-sky-300 p-2 rounded-md hover:scale-110 transition-transform duration-150 hover:cursor-pointer ease-out') Training
+          li(class='bg-sky-300 p-2 rounded-md hover:scale-110 transition-transform duration-150 hover:cursor-pointer ease-out') Express.js + PUG
+    main
+      section 
+        div 
+          a(href=myLocation + 'posts') Posts 
+      

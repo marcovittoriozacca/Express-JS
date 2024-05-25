@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Le meraviglie del Colosseo",
+        "description": "Un viaggio attraverso la storia dell'anfiteatro più famoso del mondo.",
+        "tags": ["storia", "archeologia", "Roma", "turismo"],
+        "img": "colosseo.jpg"
+    },
+    {
+        "title": "Ricette di cucina italiana",
+        "description": "Scopri come preparare i piatti più deliziosi della tradizione italiana.",
+        "tags": ["cucina", "ricette", "Italia", "gastronomia"],
+        "img": "cucina-italiana.webp"
+    },
+    {
+        "title": "Tecnologie emergenti nel 2024",
+        "description": "Una panoramica sulle tecnologie che stanno rivoluzionando il mondo.",
+        "tags": ["tecnologia", "innovazione", "2024", "futuro"],
+        "img": "2024-tech.jpg"
+    },
+    {
+        "title": "Viaggi ecosostenibili",
+        "description": "Consigli e idee per viaggiare rispettando l'ambiente.",
+        "tags": ["viaggi", "ecosostenibilità", "ambiente", "turismo responsabile"],
+        "img": "eco-travel.png"
+    },
+    {
+        "title": "I migliori libri del 2023",
+        "description": "Una selezione dei libri più apprezzati e consigliati dell'anno scorso.",
+        "tags": ["libri", "letteratura", "2023", "recensioni"],
+        "img": "best-2023-books.webp"
+    }
+]
