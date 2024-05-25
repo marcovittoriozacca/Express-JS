@@ -9,6 +9,7 @@ app.use(express.json());
 const home = require('./controllers/home');
 
 const posts = require('./controllers/posts');
+
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || "localhost";
 

@@ -4,8 +4,6 @@ const pug = require('pug');
 
 const elements = {
     title: "Home",
-    google: "https://google.com",
-    amazon: "https://amazon.com",
     myLocation: "http://localhost:3000/",
 }
 

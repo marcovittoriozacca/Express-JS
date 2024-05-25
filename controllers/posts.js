@@ -4,8 +4,6 @@ const postList = require('../database/post.json');
 
 const elements = {
     title: 'Posts',
-    google: "https://google.com",
-    amazon: "https://amazon.com",
     postsList: postList,
 }
 

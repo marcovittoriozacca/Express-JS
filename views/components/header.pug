@@ -1,0 +1,20 @@
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    link(rel="stylesheet", href="/style/output.css")
+  body 
+    header(class='fixed w-full bg-white') 
+      nav(class='flex justify-between items-center container mx-auto p-2') 
+        - const pugLink= "https://pugjs.org/api/getting-started.html"
+        ul(class='flex items-center gap-x-4')
+          li
+            figure(class="w-10")
+                img(src="/img/pugjs.png", alt="little-pug-js")
+          li
+            a(class="text-xl font-extrabold")(href=pugLink) pug
+        ul(class='flex items-center gap-x-4')
+          li(class=' hover:scale-110 transition-transform duration-150 hover:cursor-pointer ease-out')
+            a(class=' bg-neutral-800 text-neutral-100 p-2 rounded-md') GitHub
