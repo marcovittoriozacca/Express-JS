@@ -67,28 +67,58 @@ const createPost = (object) => {
     .catch(err => console.log(err));
 }
 
+const inputError = (obj, ...inputFields) => {
+    const [title, description, image] = inputFields;
+    console.log(image);
+    if(obj.title !== undefined){
+        title.classList.remove('focus:border-sky-400', 'focus:ring-sky-400');
+        title.classList.add('input-error');
+    }else{
+        title.classList.remove('input-error');
+        title.classList.add('focus:border-sky-400', 'focus:ring-sky-400');
+    }
+    
+    if(obj.description !== undefined){
+        description.classList.remove('focus:border-sky-400', 'focus:ring-sky-400');
+        description.classList.add('input-error');
+    }else{
+        description.classList.remove('input-error');
+        description.classList.add('focus:border-sky-400', 'focus:ring-sky-400');
+    }
+
+    if(obj.image !== undefined){
+        image.classList.remove('focus:border-sky-400', 'focus:ring-sky-400');
+        image.classList.add('input-error');
+    }else{
+        image.classList.remove('input-error');
+        image.classList.add('focus:border-sky-400', 'focus:ring-sky-400');
+    }
+
+    
+}
+
 addEventListener('load', function(){
 
     const sendBtn = document.getElementById('submit');
     sendBtn.addEventListener('click', function(){
 
-        const title = document.getElementById('title').value;
-        const description = document.getElementById('description').value;
-        const image = document.getElementById('image').value;
+        const title = document.getElementById('title');
+        const description = document.getElementById('description');
+        const image = document.getElementById('image');
 
-        const error = validateData(title, description, image);
+        const error = validateData(title.value, description.value, image.value);
         
         const newPost = {
-            "title": title,
-            "description": description,
+            "title": title.value,
+            "description": description.value,
             "tags": [] ,
-            "img": image
+            "img": image.value
         };
 
         if(!error){
            createPost(newPost);
         }else{
-           console.log(error);
+           inputError(error, title, description, image)
         }
     });
 
